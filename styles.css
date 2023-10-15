@@ -1,0 +1,115 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.frame{
+  width:100%;
+  height:100vh;
+  background-image: url("img.jpg");
+  background-size: contain;
+}
+
+
+#todo-form {
+  padding: 32px 32px 0;
+}
+
+#todo-form input {
+  padding: 12px;
+  margin-right: 12px;
+  position: absolute;
+  top:25%;
+  left:43%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(45deg,white 0%, #e4efe9 100%);
+
+  font-size: 14px;
+  outline: none;
+}
+
+#todo-form button {
+  padding: 12px 32px;
+
+  border-radius: 4px;
+  border: none;
+  position: absolute;
+  top:25%;
+  left:55%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  color: black;
+  background-image: linear-gradient(45deg, white 0%, #e4efe9 100%);
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.lanes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  overflow: scroll;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color:rgb(184, 20, 110);
+}
+
+.swim-lane {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: transparent;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+
+  padding: 12px;
+  border-radius: 4px;
+  width: 153px;
+  min-height: 120px;
+
+  flex-shrink: 0;
+}
+
+.task {
+  background: white;
+  color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(45deg,white 0%, #e4efe9 100%);
+  padding: 12px;
+  border-radius: 4px;
+
+  font-size: 16px;
+  cursor: move;
+}
+
+.is-dragging {
+  scale: 1.05;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background:rgb(50, 50, 50);
+  color: white;
+}

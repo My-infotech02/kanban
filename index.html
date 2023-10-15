@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanaban</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="drag.js" defer></script>
+    <script src="todo.js" defer></script>
+  </head>
+  <body>
+    <div class="frame">
+      <form id="todo-form">
+        <input type="text" placeholder="New TODO..." id="todo-input" />
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="lanes">
+        <div class="swim-lane" id="todo-lane">
+          <h3 class="heading">TODO</h3>
+
+          <p class="task" id="t1" draggable="true" >Get groceries</p>
+          <p class="task" id="t2" draggable="true" >Compeleting the Leetcode</p>
+          <p class="task" id="t3" draggable="true" >Deposit amount to Bank</p>
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">In Progress</h3>
+
+          <p class="task" id="t4" draggable="true" >Shopping</p>
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">Completed</h3>
+
+          <p class="task" id="t5" draggable="true" >Washing clothes</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
